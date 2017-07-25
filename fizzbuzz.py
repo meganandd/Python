@@ -17,7 +17,7 @@ else:
     print(":(")
 
 while True:
-    user_input = input("Type STOP to stop the program. Type CONT to continue the program")
+    user_input = input("Type STOP to stop the program. Type CONT to continue the program. ")
     if user_input == "STOP":
         break
     elif user_input == "CONT":
