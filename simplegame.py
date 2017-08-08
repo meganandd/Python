@@ -24,3 +24,7 @@ while True:
             break
     for key, val in highscores.items():
         print("Player: " + key + "\tScore: " + str(val))
+    playagain = input("Would you like to play again? ")
+    if playagain == "no":
+        print("See ya!")
+        break
