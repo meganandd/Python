@@ -211,8 +211,10 @@ def sell (money):
         if (sellwhat in inv) == True:
             inv[sellwhat] = inv[sellwhat] - int(amountsold)
             money = money + int(addamount)
-        if int(inv[sellwhat]) == 0:
-            del inv[sellwhat]
+            if int(inv[sellwhat]) == 0:
+                del inv[sellwhat]
+            #if int(inv[sellwhat]) < 0:
+                #del inv[sellwhat]
     else:
         print("The item you're trying to sell does not exist.")
     return money
@@ -226,6 +228,7 @@ def make (inv, recipebook):
         for key, val in ingredients.items():
             p_str = "{:<30}{:<35}".format("Ingredient: " + key, "Amount: " + str(val))
             print(p_str)
+        print("")
     count = 0
     makewhat = input("What dish would you like to make? ")
     if (makewhat in recipebook) == True:
